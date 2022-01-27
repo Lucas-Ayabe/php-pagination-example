@@ -5,7 +5,7 @@ namespace Lucas\Playground;
 use PDO;
 use PDOStatement;
 
-class MySqlPostDao
+class SQLitePostDao
 {
     public function __construct(private PDO $connection)
     {

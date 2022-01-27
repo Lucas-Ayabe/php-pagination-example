@@ -6,7 +6,7 @@ use Lucas\Playground\MySqlPostDao;
 define("BASE_URL", "http://localhost:8080");
 
 $page = filter_input(INPUT_GET, 'page');
-$postsDao = new MySqlPostDao(new PDO("sqlite:../database/posts.db"));
+$postsDao = new SQLitePostDao(new PDO("sqlite:../database/posts.db"));
 $posts = $postsDao->findByPage($page);
 $totalPosts = $postsDao->count();
 
